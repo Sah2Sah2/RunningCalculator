@@ -1,0 +1,171 @@
+/* -----------
+GENERAL STYLE 
+---------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling with Soft Pastel Color Animation */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #f8c8d7;  
+    animation: colorShift 40s ease infinite;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+    background-size: cover;
+}
+
+/* Animation for Pastel Color Shift */
+@keyframes colorShift {
+    0% {
+        background-color: #f8c8d7; 
+    }
+    25% {
+        background-color: #c7d8d6; 
+    }
+    50% {
+        background-color: #d3c2e1; 
+    }
+    75% {
+        background-color: #f6e2b3; 
+    }
+    100% {
+        background-color: #f8c8d7; 
+    }
+}
+
+/* Calculator Container */
+.calculator {
+    background: rgba(0, 0, 0, 0.5); 
+    backdrop-filter: blur(10px); 
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 380px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+}
+
+/* Display Styling */
+.display {
+    margin-bottom: 25px;
+    padding: 15px;
+    background-color: #4CAF50; 
+    border-radius: 12px;
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* Title */
+#title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+    padding: 12px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Button Styling */
+button {
+    color: white;
+    padding: 18px;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    width: 100%; 
+    box-sizing: border-box;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Input fields for distance/time */
+.input-group {
+    margin-bottom: 20px;
+}
+
+input[type="number"],
+input[type="text"] {
+    width: 100%;
+    padding: 15px;
+    font-size: 20px;
+    color: #000;
+    border: none;
+    border-radius: 10px;
+    background-color: #f9f9f9; 
+    margin-bottom: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid #FF6F61; 
+}
+
+/* Output section */
+.output .result-display {
+    margin-top: 20px;
+}
+
+.result-display input {
+    width: 100%;
+    padding: 15px;
+    font-size: 20px;
+    color: #333;
+    background-color: #f9f9f9;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+.result-display input[readonly] {
+    background-color: #e1f7d5;
+}
+
+/* Button group layout */
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 400px) {
+    .calculator {
+        width: 90%;
+    }
+
+    button {
+        width: 48%; 
+    }
+}
